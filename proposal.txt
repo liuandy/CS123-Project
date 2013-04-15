@@ -1,0 +1,47 @@
+Ancheng (Andy) Liu
+CMSC12300 - Computer Science with Applications III
+Borja Sotomayor
+April 14, 2013
+
+Proposed Dataset: Census-Income (KDD) Data Set
+UC-Irvine Machine Learning Repository.
+URL: http://archive.ics.uci.edu/ml/datasets/Census-Income+%28KDD%29
+
+Data Exploration
+----------------
+
+Initial analysis of a subset of the data will be conducted in R,
+using various packages to implement the classification problem
+presented (binary classification of observations into either
+above or below $50,000 annual income). I expect to use ggplot2
+to visualize the data, before beginning to attempt to build a
+binary classifier for the data.
+
+Since there are missing values in the dataset, ideally an
+expectation-maximization algorithm will be implemented to fill
+in the missing values. After finishing the task of filling in the
+missing data, I would like to implement multiple classifiers
+(possibly prepackaged in R) to see their relative efficacy.
+
+Primarily, the classification algorithm that I would like to try
+and implement will be a logit or probit model.
+
+(Ideal) Final Results
+---------------------
+
+At the end of the quarter, I would like to have classifiers
+coded in Python that run through the entirety of the dataset
+(about 300,000 observations with 40 attributes). Ideally, I will
+have control over the relative weights assigned to each of the
+attributes. With the aid of parallel processing, I'd like to run
+through as many possible combinations of weights on the attributes
+as possible, hopefully coming up with a set of weights that
+minimizes cross-validation error.
+
+From these results, I would like to be able to ascertain the
+predictive power of the various attributes presented in the
+observations.
+
+So in other words, the hypotheses I'd like to test are the
+relevance of the various attributes in predicting a person's annual
+income.
