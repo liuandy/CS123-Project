@@ -1,0 +1,51 @@
+Andy Liu
+CS123
+
+Acquiring the data
+------------------
+
+The data can be found at http://archive.ics.uci.edu/ml/machine-learning-databases/census-income-mld/census-income.data.gz.
+
+The Prototype
+-------------
+
+The prototype contains some basic analysis of the data, as well as a few preliminary models based on various factors.
+
+Observations
+------------
+
+The data contain 199,523 observations. Each of them with 41 columns, and a class label. One of the most important things
+to note is that only 5% of the data are of the annual income > 50,000 label. This has been rather problematic when
+building basic classification models. We note that classification models can guarantee a 5% error rate if the model
+elects to classify everything into the annual income < 50,000 label. This made it immediately apparent that we could not
+judge our models based off of merely misclassification rate. To address this, we opted to switch to evaluating models
+based on their misclassification rates for the two labels individually.
+
+In our first logistic regression, we decided to use something simple, age. This logistic regression resulted in the
+classification of every observation into the majority group, essentially leading to no modeling insight.
+
+Our second logistic regression used wage per hour to determine annual income labels. This regression only classified
+four observations into the above 50,000 label. Strangely enough, wage per hour is not a strong stand-alone modeling
+variable for annual income. This actually is a little counterintuitive, but wage per hour also requires an hours
+per week value to provide any significant analysis.
+
+Unsurprisingly, when we tried modeling using only level of education as a response, we had an exceptionally strong
+classifier. For misclassifying the > 50,000 group to the < 50,000 group, we only had a misclassification rate of
+11.5%. Additionally, for misclassifying the < 50,000 group to the > 50,000 group, we only had a misclassification rate of
+5.7%.
+
+We also scanned over the data for missing values. We determined that there are 104,393 rows in our data that are missing
+values of some sort. This is denoted in the actual observation with a ? mark. Additionally, every row has at least one
+field of the value "Not in universe." I'm not actually sure what that means at the moment.
+
+Analysis
+--------
+
+Although the original plan was to test the predictive strength of less intuitive predictors of annual income, that may
+be less possible due to the relative frequencies of class labels in the data. It may be the case that we must include at
+least one conventionally strong predictor in each model to ensure at least some separation of classes.
+
+We still need to figure out an intelligent way to fill in missing values. The implementation of the EM algorithm still
+needs to happen, but a rudimentary version could be introduced that simply fills each missing value with the most
+common occurrence across the entire dataset. Aside from the EM algorithm, it may be worthwhile to explore using kNN to
+fill in missing values.
