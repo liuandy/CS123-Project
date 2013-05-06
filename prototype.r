@@ -13,7 +13,7 @@ sum(class) / length(class)
 
 # Normalizing the data
 for (i in 1:(dim(cont_data)[2])) {
-  cont_data[,i] <- (cont_data[,i] - mean(cont_data[,1])) / sd(cont_data[,i])
+  cont_data[,i] <- (cont_data[,i] - mean(cont_data[,i])) / sd(cont_data[,i])
 }
 
 # Building a data-frame for log regression only using age as predictor
@@ -27,6 +27,8 @@ summary(predict(test1.logr, test1, type = "response"))
 
 # Let's look at wage per hour
 summary(cont_data$V6)
+# We stop to note that this data makes absolutely no sense.
+# 
 
 test2 <- data.frame(age = cont_data$V1, wph = cont_data$V6, class = class)
 test2.logr <- glm(class ~ age + wph, data = test2, family = binomial)
@@ -52,7 +54,7 @@ sum(test3.misclass == 1)/ abs(sum(class - 1))
 # So, we see from this that education is a great stand-alone predictor of income.
 # That's rather unsurprising.
 
-niu <- apply(data, 1, function(x) (sum(x == " ?") > 0))
+niu <- apply(data, 1, function(x) (sum(x == " Not in universe") > 0))
 sum(niu)
 
 missing <- apply(data, 1, function(x) (sum(x == " ?") > 0))
