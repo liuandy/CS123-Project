@@ -1,4 +1,5 @@
-setwd("C:/Users/Andy/Dropbox/Schoolwork/CS123/Project Data")
+
+setwd("C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/CMSC123/andyproj/CS123-Project")
 
 data <- read.table("census-income.data", sep = ",", header =F, na.strings = "NA")
 # Extract only the continuous data to work with for now
@@ -13,7 +14,7 @@ sum(class) / length(class)
 
 # Normalizing the data
 for (i in 1:(dim(cont_data)[2])) {
-  cont_data[,i] <- (cont_data[,i] - mean(cont_data[,1])) / sd(cont_data[,i])
+  cont_data[,i] <- (cont_data[,i] - mean(cont_data[,i])) / sd(cont_data[,i])
 }
 
 # Building a data-frame for log regression only using age as predictor
@@ -21,6 +22,7 @@ test1 <- data.frame(age = cont_data$V1, class = class)
 test1.logr <- glm(class ~ age, data = test1, family = binomial)
 
 summary(predict(test1.logr, test1, type = "response"))
+#results: max is .18210, so everything classed as 0. Majority classifier
 
 # From here, we see that with only age, we do not have nearly enough predictive power.
 # Everything is classified as below median income.
@@ -45,14 +47,17 @@ test3.misclass <- class - (predict(test3.logr, test3, "response") > .5)
 
 # Misclassing 50,000+ as 50,000-
 sum(test3.misclass == - 1) / sum(class)
+#results of .1154902 indicates that 11% of above 5K classified as under 5K
 
 # Misclassing 50,000- as 50,000+
 sum(test3.misclass == 1)/ abs(sum(class - 1))
+#result of .0574 indicates that 5% of under 5K classified as over 5K
 
 # So, we see from this that education is a great stand-alone predictor of income.
 # That's rather unsurprising.
 
-niu <- apply(data, 1, function(x) (sum(x == " ?") > 0))
+#not in universe: 
+niu <- apply(data, 1, function(x) (sum(x == "Not in Universe") > 0))
 sum(niu)
 
 missing <- apply(data, 1, function(x) (sum(x == " ?") > 0))
