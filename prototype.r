@@ -1,7 +1,7 @@
 
 setwd("C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/CMSC123/andyproj/CS123-Project")
-
 data <- read.table("census-income.data", sep = ",", header =F, na.strings = "NA")
+names(data) <- c("AAGE","ACLSWKR","ADTIND","ADTOCC","AHGA","AHRSPAY","AHSCOL","AMARITL","AMJIND","AMJOCC","ARACE","AREORGN","ASEX","AUNMEM","AUNTYPE","AWKSTAT","CAPGAIN","CAPLOSS","DIVVAL","FILESTAT","GRINREG","GRINST","HHDFMX","HHDREL","MARSUPWT","MIGMTRM1","MIGMTR3","MIGMTR4","MIGSAME","MIGSUN","NOEMP","PARENT","PEFNTVTY","PEMNTVTY","PENATVTY","PRCITSHP","SEOTR","VETQVA","VETYN","WKSWORK","YEAR","INC")
 # Extract only the continuous data to work with for now
 cont_data <- data[,c(1,3,4,6,17,18,19,25,31,37,39,40,41)]
 
@@ -18,8 +18,10 @@ for (i in 1:(dim(cont_data)[2])) {
 }
 
 # Building a data-frame for log regression only using age as predictor
-test1 <- data.frame(age = cont_data$V1, class = class)
+test1 <- data.frame(age = cont_data$AAGE, class = class)
 test1.logr <- glm(class ~ age, data = test1, family = binomial)
+
+#family = binomial specifies log regression. 
 
 summary(predict(test1.logr, test1, type = "response"))
 #results: max is .18210, so everything classed as 0. Majority classifier
@@ -27,17 +29,17 @@ summary(predict(test1.logr, test1, type = "response"))
 # From here, we see that with only age, we do not have nearly enough predictive power.
 # Everything is classified as below median income.
 
-# Let's look at wage per hour
-summary(cont_data$V6)
+# Let's look at wage per hour. Remember, this is normalized to mean 0, sd=1
+summary(cont_data$AHRSPAY)
 
-test2 <- data.frame(age = cont_data$V1, wph = cont_data$V6, class = class)
+test2 <- data.frame(age = cont_data$AAGE, wph = cont_data$AHRSPAY, class = class)
 test2.logr <- glm(class ~ age + wph, data = test2, family = binomial)
 
 sum(predict(test2.logr, test2, "response") > .5)
 # We make four classifications into 1.
 
 # Let's try something that is tried and true in income classification
-test3 <- data.frame(educ = data$V5, class = class)
+test3 <- data.frame(educ = data$AHGA, class = class)
 test3.logr <- glm(class ~ factor(educ), data = test3, family = binomial)
 
 # 3056 classifications into the 50,000+ category. That's lovely.
@@ -57,8 +59,17 @@ sum(test3.misclass == 1)/ abs(sum(class - 1))
 # That's rather unsurprising.
 
 #not in universe: 
-niu <- apply(data, 1, function(x) (sum(x == "Not in Universe") > 0))
+niu <- apply(data, 1, function(x) (sum(x == "  Not in universe") > 0))
 sum(niu)
 
 missing <- apply(data, 1, function(x) (sum(x == " ?") > 0))
 sum(missing)
+
+#Try to find the "best" model using 
+
+
+#Now, use crossvalidation
+
+
+
+#
