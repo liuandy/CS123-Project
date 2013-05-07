@@ -79,8 +79,10 @@ sum(aic.misclass == 1)/ abs(sum(class - 1))  #.05255396
 #Try to find the "best" model using AIC (Akaike Information Criteria)
 #AIC defined as -2max loglik + 2*p m
 step(aicmodel)
-#results
-aicres <- glm(formula = class ~ vars.V1 + vars.V3 + vars.V4 + vars.V6 + vars.V17 + vars.V18 + vars.V19 + vars.V25 + vars.V31 + vars.V37 +     vars.V40 + vars.V41, family = binomial, data = testaic)
+#resulting model
+#Note that step() removed VETYN, veteran's benefits
+
+aicres <- glm(formula = class ~ vars.AAGE + vars.ADTIND + vars.ADTOCC + vars.AHRSPAY + vars.CAPGAIN + vars.CAPLOSS + vars.DIVVAL + vars.MARSUPWT + vars.NOEMP + vars.SEOTR + vars.WKSWORK + vars.YEAR, family = binomial, data = testaic)
 aicres.misclass <- class - (predict(aicres,testaic,type="response") > .5)
 sum(aicres.misclass == - 1) / sum(class)   #.07389
 sum(aicres.misclass == 1)/ abs(sum(class - 1))  #.05255396
@@ -89,8 +91,17 @@ sum(aicres.misclass == 1)/ abs(sum(class - 1))  #.05255396
 summary((predict(aicmodel,testaic,type="response") > .5)==(predict(aicres,testaic,type="response")  > .5))
 #Yes, these models predict the same points. 
 
+#Can we obtain any information from diagnostic plots?
+#(This might freeze your computer)
+plot(aicres)
+#we see that most normality assumptions are not being fulfilled.
+#Note that in residuals vs. leverage, there is huge residual (point 154634)
 
-#results: glm(formula = class ~ vars.V1 + vars.V3 + vars.V4 + vars.V6 + vars.V17 + vars.V18 + vars.V19 + vars.V25 + vars.V31 + vars.V37 + vars.V40 + vars.V41, family = binomial, data = testaic)
+#Let's try another model selection algorithm:
+b <- regsubsets(class ~., data = testaic, family=binomial)
+res<-summary(b)
+
+
 
 #So, will this model perform better on a smaller subset of the data? 
 
