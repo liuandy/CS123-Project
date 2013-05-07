@@ -1,0 +1,87 @@
+Andy Liu and Nelson Auner
+Borja Sotomayor
+CMSC 12300
+
+Project Writeup
+---------------
+
+Implementation
+--------------
+Our initial model building was in R, taking advantage of the GLM package to build
+logistic regressions rather smoothly. We process the data by extracting only the
+continuous variables. We then normalize the continuous variables by subtracting
+by the mean and dividing by the standard deviation of each continuous variable.
+We process the data mostly by way of logistic regressions. We started out with a
+few single continuous predictor logistic regressions, a categorical factor
+logistic regression, and then used AIC to find the "best" model using the
+continuous variables. Our prototype outputs a set of initial models, and our
+commentary on the efficacy of the various models.
+
+The plan is to move to Python and be able to mostly automate model building. As
+of right now, we have a Python script that imports the data we have into Python
+via pandas.
+
+What We've Learned About the Data
+---------------------------------
+The documentation for the data is terribly formatted. There is no one set of
+column labels that actually correctly identify them. Additionally, the dataset
+does not come with a header row, so that makes it even harder. Labels are drawn
+from both the Census Bureau as well as on their own, and the combination of the
+two still does not accurately reflect the columns in the actual dataset. This,
+combine with various typos, made it fairly difficult to identify which column
+was which in the beginning.
+
+Additionally, we quickly found out that the classes are not of equal size. In
+fact, the class with more than $50,000 in annual income is only around 5% of the
+actual dataset. This is actually quite a problem, since the majority classifier
+will only have a 5% error rate. We've worked around this by changing the metric
+with which we evaluate the model. Instead of just a raw misclassification rate,
+we look at the misclassification rate for each specific class individually. The
+sparsity of the higher income class also makes it almost necessary to include at
+least one high predictive power predictor in each model that we build. Single,
+weaker classifiers tend to end up resulting in the majority classifier, which is
+not what we want. This is contrary to our initial designs of excluding generally
+accepted strong predictors of income.
+
+Lastly, missing data is coded in strange ways in our dataset. We have entries in
+the data that are ? marks, but we also have entries in the data that are "Not in
+universe." We're not entirely certain as to what the "Not in universe" entries
+actually are, but we suspect they also have something to do with missing data.
+Every row in our dataset has at least one field that is "Not in universe."
+
+Conclusions from Initial Exploration of Data
+--------------------------------------------
+Overall, we are on track with the initial plan for analysis. The initial
+exploration has made it obvious that we need to figure out how to deal with
+missing data entries. While the original plan was an EM Algorithm, we are now
+leaning more towards a kNN algorithm that fills in the blanks with attributes
+from the nearest neighbors.
+
+The goal of focusing only on less commonly acccepted predictors of wealth is
+going to be scrapped, due to the sparsity of the high income class. We will
+undoubtedly include at least some high-power predictors in our models.
+
+Again, due to the sparsity of the class, we will not be using simple
+misclassification rate as a metric for evaluating our models. We're going to
+look at individual misclassification rates by class, most likely weighing them
+equally.
+
+Lastly, due to the sparsity of the data, we will have to be careful when we use
+cross-validation to build our models. Because of how few high income observations
+we have, we will have to actively ensure that we include a decent amount of high
+income observations in each group when we partition the data.
+
+Greatest Challenges when Working with this Data
+-----------------------------------------------
+So far, the greatest challenges have been figuring out what column actually
+reflects what, due to the poor documentation. And even after figuring that out,
+we still have trouble figuring out what each column actually means. For example,
+our wage per hour column is definitely not in dollars. We suspect that it's
+actually in cents. Additionally, there are quite a few observations with a wage
+per hour of 0. Our speculation has led to believing that people who are not paid
+by the hour are assigned an hourly wage of 0. However, NONE of this is documented
+anywhere.
+
+The other big challenge is making sure that our models are not simply the majority
+classifier, which is fairly difficult given how well it does from a raw performance
+standpoint.
