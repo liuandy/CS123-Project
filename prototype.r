@@ -28,15 +28,8 @@ summary(predict(test1.logr, test1, type = "response"))
 # From here, we see that with only age, we do not have nearly enough predictive power.
 # Everything is classified as below median income.
 
-<<<<<<< HEAD
-# Let's look at wage per hour
-summary(cont_data$V6)
-# We stop to note that this data makes absolutely no sense.
-# 
-=======
 # Let's look at wage per hour. Remember, this is normalized to mean 0, sd=1
 summary(cont_data$AHRSPAY)
->>>>>>> nelsons
 
 test2 <- data.frame(age = cont_data$AAGE, wph = cont_data$AHRSPAY, class = class)
 test2.logr <- glm(class ~ age + wph, data = test2, family = binomial)
@@ -64,12 +57,8 @@ sum(test3.misclass == 1)/ abs(sum(class - 1))
 # So, we see from this that education is a great stand-alone predictor of income.
 # That's rather unsurprising.
 
-<<<<<<< HEAD
-niu <- apply(data, 1, function(x) (sum(x == " Not in universe") > 0))
-=======
 #not in universe: 
 niu <- apply(data, 1, function(x) (sum(x == "  Not in universe") > 0))
->>>>>>> nelsons
 sum(niu)
 
 missing <- apply(data, 1, function(x) (sum(x == " ?") > 0))
