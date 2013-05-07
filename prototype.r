@@ -21,7 +21,7 @@ for (i in 1:(dim(cont_data)[2])) {
 test1 <- data.frame(age = cont_data$AAGE, class = class)
 test1.logr <- glm(class ~ age, data = test1, family = binomial)
 
-#family = binomial specifies log regression. 
+#(note: family = binomial specifies log regression. )
 
 summary(predict(test1.logr, test1, type = "response"))
 #results: max is .18210, so everything classed as 0. Majority classifier
@@ -65,8 +65,32 @@ sum(niu)
 missing <- apply(data, 1, function(x) (sum(x == " ?") > 0))
 sum(missing)
 
-#Try to find the "best" model using 
+#Try to find the "best" model using AIC (Akaike Information Criteria)
+#AIC defined as -2max loglik + 2*p 
 
+testaic = data.frame(vars = cont_data,class=class)
+aicmodel <- glm(class~  .,data = testaic, family=binomial)
+sum(abs(class-(predict(aicmodel,testaic,type="response"))))
+aic.misclass <- class - (predict(aicmodel,testaic,type="response") > .5)
+sum(aic.misclass == - 1) / sum(class)   #.0789759
+sum(aic.misclass == 1)/ abs(sum(class - 1))  #.05255396
+#Now, use AIC
+
+#Try to find the "best" model using AIC (Akaike Information Criteria)
+#AIC defined as -2max loglik + 2*p m
+step(aicmodel)
+
+#results: glm(formula = class ~ vars.V1 + vars.V3 + vars.V4 + vars.V6 + vars.V17 + vars.V18 + vars.V19 + vars.V25 + vars.V31 + vars.V37 + vars.V40 + vars.V41, family = binomial, data = testaic)
+
+#So, will this model perform better on a smaller subset of the data? 
+
+
+step(aicmodel)
+summary(predict(aicmodel,testaic,type="response"))
+#resulting model:
+#INC ~ AAGE + ACLSWKR + ADTIND + ADTOCC + ASEX + FILESTAT + MARSUPWT + NOEMP
+summary(predict(g,head(data,100),type="response"))
+aic.misclass <- head(data$INC,100) - (predict(g,head(data,100),type= "response") > .5)
 
 #Now, use crossvalidation
 
