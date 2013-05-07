@@ -1,4 +1,3 @@
-
 setwd("C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/CMSC123/andyproj/CS123-Project")
 data <- read.table("census-income.data", sep = ",", header =F, na.strings = "NA")
 names(data) <- c("AAGE","ACLSWKR","ADTIND","ADTOCC","AHGA","AHRSPAY","AHSCOL","AMARITL","AMJIND","AMJOCC","ARACE","AREORGN","ASEX","AUNMEM","AUNTYPE","AWKSTAT","CAPGAIN","CAPLOSS","DIVVAL","FILESTAT","GRINREG","GRINST","HHDFMX","HHDREL","MARSUPWT","MIGMTRM1","MIGMTR3","MIGMTR4","MIGSAME","MIGSUN","NOEMP","PARENT","PEFNTVTY","PEMNTVTY","PENATVTY","PRCITSHP","SEOTR","VETQVA","VETYN","WKSWORK","YEAR","INC")
@@ -106,7 +105,7 @@ summary((predict(aicmodel,testaic,type="response") > .5)==(predict(aicres,testai
 #So, will this model perform better on a smaller subset of the data? 
 
 
-#Variable selection: start with small model, and get biger? 
+#Variable selection: start with small model, and get bigger? 
 
 
 #principal components?!
