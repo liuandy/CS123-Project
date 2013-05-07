@@ -72,25 +72,33 @@ testaic = data.frame(vars = cont_data,class=class)
 aicmodel <- glm(class~  .,data = testaic, family=binomial)
 sum(abs(class-(predict(aicmodel,testaic,type="response"))))
 aic.misclass <- class - (predict(aicmodel,testaic,type="response") > .5)
-sum(aic.misclass == - 1) / sum(class)   #.0789759
+sum(aic.misclass == - 1) / sum(class)   #.07389759
 sum(aic.misclass == 1)/ abs(sum(class - 1))  #.05255396
 #Now, use AIC
 
 #Try to find the "best" model using AIC (Akaike Information Criteria)
 #AIC defined as -2max loglik + 2*p m
 step(aicmodel)
+#results
+aicres <- glm(formula = class ~ vars.V1 + vars.V3 + vars.V4 + vars.V6 + vars.V17 + vars.V18 + vars.V19 + vars.V25 + vars.V31 + vars.V37 +     vars.V40 + vars.V41, family = binomial, data = testaic)
+aicres.misclass <- class - (predict(aicres,testaic,type="response") > .5)
+sum(aicres.misclass == - 1) / sum(class)   #.07389
+sum(aicres.misclass == 1)/ abs(sum(class - 1))  #.05255396
+
+#Note that the results for the two models are the same. Perhaps they are predicting the same points?
+summary((predict(aicmodel,testaic,type="response") > .5)==(predict(aicres,testaic,type="response")  > .5))
+#Yes, these models predict the same points. 
+
 
 #results: glm(formula = class ~ vars.V1 + vars.V3 + vars.V4 + vars.V6 + vars.V17 + vars.V18 + vars.V19 + vars.V25 + vars.V31 + vars.V37 + vars.V40 + vars.V41, family = binomial, data = testaic)
 
 #So, will this model perform better on a smaller subset of the data? 
 
 
-step(aicmodel)
-summary(predict(aicmodel,testaic,type="response"))
-#resulting model:
-#INC ~ AAGE + ACLSWKR + ADTIND + ADTOCC + ASEX + FILESTAT + MARSUPWT + NOEMP
-summary(predict(g,head(data,100),type="response"))
-aic.misclass <- head(data$INC,100) - (predict(g,head(data,100),type= "response") > .5)
+#Variable selection: start with small model, and get biger? 
+
+
+#principal components?!
 
 #Now, use crossvalidation
 
