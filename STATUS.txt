@@ -4,7 +4,6 @@ Andy Liu, Nelson Auner
 CMSC12300
 ======================
 
-
 One major step of our status report was translating our R analysis into python. 
 This step involved using a number of python packages to implement native R 
 functions. In the file "nelsonscode.py", logistic regression is performed on the 
