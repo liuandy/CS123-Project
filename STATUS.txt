@@ -1,0 +1,68 @@
+STATUS REPORT
+======================
+Andy Liu, Nelson Auner
+CMSC12300
+======================
+
+
+One major step of our status report was translating our R analysis into python. 
+This step involved using a number of python packages to implement native R 
+functions. In the file "nelsonscode.py", logistic regression is performed on the 
+dataset loaded into a DataFrame through the PANDAS module. 
+
+A logistic regression is regressing a matrix X on a vector Y, where Y is binary 
+response variable. For example, in our analysis, Y is either above 50K or not. We 
+use the logistic density function to estimate the probability of Y being 1 or 0 
+given our X. Then, we predict that Y is 1 for all predicted probabilities greater 
+than .5. The parameters of this model, including the density function and the 
+cutoff point, can all be optimized, which is a computation we plan to implement. 
+
+Finally, I created a short scoring function that scores our predictions in a 
+similar manner to the built-in method we used in R.
+
+One of the more difficult parts of transitioning to Python has been the loss of 
+many in-house features provided by R. This difficulty has mostly been mitigated 
+with tools such as numpy and pandas. Being able to store our data in a pandas 
+dataframe has been quite helpful, as it is remarkably similar to an R dataframe.
+
+One of the challenges of working with this dataset has been the amount of missing 
+data present. Originally, the plan was to implement an EM algorithm to fill in 
+missing data. That was a bit ambitious, and given that we had no rational 
+justification for any possible underlying statistical distribution behind the data, 
+using the EM algorithm ended up feeling a bit too arbitrary.
+
+In knn_fill.py, we implemented various functions that helped with our analysis of 
+the missing data. The find_missing function reads in a pandas dataframe and for 
+each observation, outputs a list of missing column labels. The miss_counts function 
+read in the output of our find_missing function, and generated a count of the 
+various missing labels. To our surprise, there were eight columns that ever 
+contained missing values. These columns were various migration codes, nationality 
+of parents and self, and the state of previous residence.
+
+We ended up deciding that the migration codes and the state of previous residence 
+were not going to be the focus of our analysis. For the most part, this is because 
+the codes are not applicable to everyone, since not everyone migrates. A 
+decent-sized portion of observations had missing values for these fields, 
+suggesting that the task of reconstructing the missing data would be rather 
+pointless.
+
+However, we noted that the country of birth for the mother and father were pieces 
+of information that everyone has (they may not necessarily know, but that was not 
+the point). To reconstruct the missing data, we implemented something resembling a 
+kNN implementation. First, we partitioned the data into the set of data with 
+missing values and the set of data with complete entries. For observation with 
+missing values, we find its nearest neighbor in the set with complete entries, and 
+fill in the missing values with the values of its nearest neighbor. Our distance 
+metric is rather simple, we have a specific set of fields that we check. We start 
+with a distance of zero between any two observations. For each field where the two 
+observations do not match, we increase the distance by one.
+
+At first, we were worried that this method would only fill in our missing values 
+with the same thing for everything, for example “United-States” for everyone. That 
+would have been sad. However, the log file that our knnfill1 function generates 
+showed us that that was not the case at all. The missing data filler takes about 
+two hours to run, but could very easily be parallelized.
+
+Now that we have an implementation that allows us to reconstruct missing data in a 
+somewhat reasonable way, the main thing we have to do now is run a large number of 
+models on our data to see how well we are predicting our response variable.

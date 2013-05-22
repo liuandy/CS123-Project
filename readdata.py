@@ -1,5 +1,6 @@
 import sys
 import pandas as pd
+from knnfill import *
 
 with open('census-income.data', 'r') as f:
 	lines = f.readlines()
@@ -43,3 +44,10 @@ labels = ['AAGE', 'ACLSWKR', 'ADTIND', 'ADTOCC', 'AHGA', \
 	'YEAR', 'CLASS']
 	
 data = pd.DataFrame(data_final, columns = labels)
+
+data2 = data.copy()
+
+subset = map(lambda x: len(x) == 0, find_missing(data))
+
+data_nomiss = data2[subset]
+data_miss = data2[map(lambda x: not x, subset)]
