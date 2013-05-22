@@ -1,0 +1,9 @@
+One major step of our status report was translating our R analysis into python. 
+This step involved using a number of python packages to implement native R functions.
+In the file "nelsonscode.py", logistical regression is performed on the dataset loaded into  DataFrame through the PANDAS module. 
+A logistical regression is regressing a matrix X on a vector Y, where Y is binary. For example, in our analysis, Y is either above 50K or not.
+We use the the logistical density function to estimate the probability of Y being 1 or 0 given our X.
+Then, we predict that Y is 1 for all predicted probabilities greater than .5. 
+The parameters of this model, including the density function and the cutoff point, can all be optimized, which is a computation we plan to implement. 
+Finally, I created a short scoring function that scores our predictions in a similar manner to the built-in method we used in R. 
+
