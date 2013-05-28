@@ -19,9 +19,9 @@ for line in data:
 		temp = line[i].strip()
 		if i == 41:
 			if temp == '- 50000.':
-				temp = 1
-			else:
 				temp = 0
+			else:
+				temp = 1
 		elif temp == '?':
 			temp = None
 		elif i in cont_data:
