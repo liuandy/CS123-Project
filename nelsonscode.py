@@ -111,7 +111,7 @@ for k in Ks:
 	for fp, fn in CVresults:
 		k_cv.append(k)
 		fp_cv.append(fp)
-		fn_csv.append(fn)
+		fn_cv.append(fn)
 pylab.figure(1)
 pylab.subplot(211)
 pylab.xlim(Ks[0]-2,Ks[-1]+2)
