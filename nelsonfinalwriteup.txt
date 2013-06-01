@@ -1,0 +1,10 @@
+Nelson's progress report:
+
+
+Used logistic regression to predict class from education variables
+Write script to perform cross validation in python, and plot error as a determinate of k (from k-fold cv).
+
+Next step:
+
+Run program on full data set - AWS
+Run program with more predictive variables
