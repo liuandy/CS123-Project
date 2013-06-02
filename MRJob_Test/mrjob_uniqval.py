@@ -5,7 +5,7 @@ class MRUniqueVal(MRJob):
 	
 	def mapper(self, _, line):
 		url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
-		p_data = urllib2.openurl(url).read()
+		p_data = urllib2.urlopen(url).read()
 		data = pickle.loads(p_data)
 		
 		for l in line:
