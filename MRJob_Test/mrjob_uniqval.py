@@ -10,11 +10,10 @@ class MRUniqueVal(MRJob):
 		
 		wtf = 0
 		
-		for l in line:
-			wtf += 1
-			var = l.strip().upper()
-			#rv = list(set(data[var]))
-			yield (1, (var, 'hi: ' + str(wtf)))
+		wtf += 1
+		var = line.strip().upper()
+		#rv = list(set(data[var]))
+		yield (1, (var, 'hi: ' + str(wtf)))
 	
 	def reducer(self, key, value):
 		yield (key, list(value))
