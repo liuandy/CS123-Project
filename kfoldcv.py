@@ -1,5 +1,5 @@
 ## {{{ http://code.activestate.com/recipes/521906/ (r3)
-#copied by nelson and adapted without permission.
+#copied by nelson and adapted permission.
 def k_fold_cross_validation(X, K, randomise = False):
 	"""
 	Generates K (training, validation) pairs from the items in X.
