@@ -27,5 +27,5 @@ class MRUniqueVal2(MRJob):
 	def reducer(self, key, line):
 		yield (key, list(line))
 		
-if __name__ = '__main__':
+if __name__ == '__main__':
 	MRUniqueVal2.run()
