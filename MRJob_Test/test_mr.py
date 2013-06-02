@@ -7,10 +7,10 @@ class MRTerribleTerribleDamage(MRJob):
 			yield (int(l), int(l) ** 2)
 	
 	def combiner(self, l, squared):
-		yield (int(l), sum(squared))
+		yield (int(l), squared.next())
 	
 	def reducer(self, l, squared):
-		yield (int(l), sum(squared))
+		yield (int(l), squared.next())
 	
 if __name__ == '__main__':
 	MRTerribleTerribleDamage.run()
