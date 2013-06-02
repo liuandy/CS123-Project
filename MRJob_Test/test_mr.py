@@ -13,7 +13,7 @@ class MRTerribleTerribleDamage(MRJob):
 		yield (int(l), squared.next())
 		
 	def steps(self):
-		return [self.mr(mapper = self.mapper, combiner = none, reducer = self.reducer)]
+		return [self.mr(mapper = self.mapper, combiner = None, reducer = self.reducer)]
 	
 if __name__ == '__main__':
 	MRTerribleTerribleDamage.run()
