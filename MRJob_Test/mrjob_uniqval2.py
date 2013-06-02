@@ -15,7 +15,8 @@ class MRUniqueVal2(MRJob):
 		for i in range(4):
 			if i < 3:
 				yield (i, temp[(i*N):((i+1)*N)])
-			yield (i, temp[(i*N):])
+			else:
+				yield (i, temp[(i*N):])
 	
 	def mapper(self, key, line):
 		wtf = 0
