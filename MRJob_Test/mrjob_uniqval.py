@@ -11,7 +11,7 @@ class MRUniqueVal(MRJob):
 		for l in line:
 			var = l.strip().upper()
 			rv = list(set(data[var]))
-			yield (None, (var, rv))
+			yield (1, (var, rv))
 	
 	def reducer(self, key, value):
 		yield (key, list(value))
