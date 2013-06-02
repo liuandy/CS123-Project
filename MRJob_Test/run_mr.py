@@ -1,7 +1,7 @@
 from test_mr import MRTerribleTerribleDamage
 
 if __name__ == '__main__':
-	job = MRTerribleTerribleDamage(range(10))
+	job = MRTerribleTerribleDamage([1,2,3,4,5])
 	with job.make_runner() as runner:
 		runner.run()
 		
