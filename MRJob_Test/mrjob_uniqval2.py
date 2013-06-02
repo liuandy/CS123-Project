@@ -11,7 +11,7 @@ class MRUniqueVal2(MRJob):
 		
 	def splitreduce(self, key, line):
 		temp = list(line)
-		N = length(temp) / 4
+		N = len(temp) / 4
 		for i in range(4):
 			if i < 3:
 				yield (i, temp[(i*N):((i+1)*N)])
