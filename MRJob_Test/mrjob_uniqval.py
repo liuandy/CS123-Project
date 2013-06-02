@@ -1,9 +1,9 @@
 from mrjob.job import MRJob
-import urllib2, pickle
 
 class MRUniqueVal(MRJob):
 	
 	def mapper(self, _, line):
+		import urllib2, pickle, pandas
 		url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
 		p_data = urllib2.urlopen(url).read()
 		data = pickle.loads(p_data)
