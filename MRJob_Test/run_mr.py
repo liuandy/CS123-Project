@@ -6,8 +6,6 @@ if __name__ == '__main__':
 	with job.make_runner() as runner:
 		runner.run()
 		
-		rv = []
-		
 		for line in runner.stream_output():
 			key, value = job.parse_output_line(line)
-			print (key, value)
+			print "Key: ", key, " Value: ", value
