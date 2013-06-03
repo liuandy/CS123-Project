@@ -38,7 +38,8 @@ class MRLogReg(MRJob):
 		data = pickle.loads(p_data)
 
 		for vars in line:
-			varlist = filter(lambda x: x in cont_dict and cont_dict[x] != -1, vars)
+			varlist = vars.strip().split(',')
+			varlist = filter(lambda x: x in cont_dict and cont_dict[x] != -1, varlist)
 
 			data2 = data[varlist + ['CLASS']].copy()
 
