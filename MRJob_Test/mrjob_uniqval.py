@@ -1,17 +1,19 @@
 from mrjob.job import MRJob
-import urllib2, pickle
 
 class MRUniqueVal(MRJob):
 	
 	def mapper(self, _, line):
-		url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
-		p_data = urllib2.urlopen(url).read()
-		data = pickle.loads(p_data)
+		#import urllib2, pickle, pandas
+		#url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
+		#p_data = urllib2.urlopen(url).read()
+		#data = pickle.loads(p_data)
 		
-		for l in line:
-			var = l.strip().upper()
-			rv = list(set(data[var]))
-			yield (None, (var, rv))
+		wtf = 0
+		
+		wtf += 1
+		var = line.strip().upper()
+		#rv = list(set(data[var]))
+		yield (1, (var, 'hi: ' + str(wtf)))
 	
 	def reducer(self, key, value):
 		yield (key, list(value))
