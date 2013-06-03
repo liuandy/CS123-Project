@@ -2,7 +2,7 @@ from mrjob.job import MRJob
 
 class MRLogReg(MRJob):
 	def steps(self):
-		return [self.mr(mapper = self.splitter, reducer = self.splitreduce), self.mr(mapper = self.mapper, reducer = self.reducer)]
+		return [self.mr(mapper = self.splitter, reducer = self.splitreduce), self.mr(mapper = self.mapper)]
 		
 	def splitter(self, key, line):
 		var = line.strip().upper()
@@ -64,5 +64,6 @@ class MRLogReg(MRJob):
 			t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
 			
 			yield (vars, (t1err, t2err))
-	def reducer(self, key, line):
-		yield (key, line)
+		
+if __name__ == '__main__':
+	MRLogReg.run()
