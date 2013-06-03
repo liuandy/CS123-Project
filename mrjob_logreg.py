@@ -10,7 +10,7 @@ class MRLogReg(MRJob):
 		
 	def splitreduce(self, key, line):
 		# Set N to number of slaves
-		N = 2
+		N = 4
 		
 		rv = []
 		for i in range(N):
@@ -38,7 +38,7 @@ class MRLogReg(MRJob):
 		data = pickle.loads(p_data)
 		
 		data_t_url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/test_pickle'
-		p_data = urllib2.urlopen(data_url).read()
+		p_data = urllib2.urlopen(data_t_url).read()
 		data_t = pickle.loads(p_data)
 
 		for vars in line:
