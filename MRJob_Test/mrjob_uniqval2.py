@@ -19,11 +19,16 @@ class MRUniqueVal2(MRJob):
 				yield (i, temp[(i*N):])
 	
 	def mapper(self, key, line):
+		import pandas, pickle, urllib2
+		url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
+		p_data = urllib2.urlopen(url).read()
+		data = pickle.loads(p_data)
+		
 		wtf = 0
 		
 		for l in line:
 			wtf += 1
-			yield (key, l + ': ' + str(wtf))
+			yield (l, (wtf, list(set(data[l]))))
 	
 	def reducer(self, key, line):
 		yield (key, list(line))
