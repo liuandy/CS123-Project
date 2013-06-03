@@ -13,7 +13,7 @@ vars = map(lambda x: x[0], vars)
 timer = time.time()
 
 with open('scan_range.txt', 'w') as f:
-	for i in range(1,3):
+	for i in range(1,2):
 		temp = itertools.combinations(vars, i)
 		for t in temp:
 			f.write(str(t).strip('()').strip(',').replace(' ', '').replace('\'', ''))
