@@ -55,16 +55,21 @@ class MRLogReg(MRJob):
 				else:
 					regvars.append(var)
 
-			logger = sm.Logit(data2['CLASS'], data2[regvars])
+			try:
+				logger = sm.Logit(data2['CLASS'], data2[regvars])
 
-			preds = logger.fit().predict()
+				preds = logger.fit().predict()
 
-			errs = np.array(data2['CLASS']) - np.round(preds)
+				errs = np.array(data2['CLASS']) - np.round(preds)
 
-			t1err = len(filter(lambda x: x == -1, errs)) / float(len(data2['CLASS']) - sum(data2['CLASS']))
-			t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
-			
-			yield (vars, (t1err, t2err))
+				t1err = len(filter(lambda x: x == -1, errs)) / float(len(data2['CLASS']) - sum(data2['CLASS']))
+				t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
+				
+				yield (vars, (t1err, t2err))
+			except:
+				yield (vars, (-1, -1))
+				pass
+		
 		
 if __name__ == '__main__':
 	MRLogReg.run()
