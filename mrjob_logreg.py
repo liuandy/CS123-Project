@@ -2,7 +2,8 @@ from mrjob.job import MRJob
 
 class MRLogReg(MRJob):
 	def steps(self):
-		return [self.mr(mapper = self.splitter, reducer = self.splitreduce)''', self.mr(mapper = self.mapper, reducer = self.reducer)''']
+		''', self.mr(mapper = self.mapper, reducer = self.reducer)'''
+		return [self.mr(mapper = self.splitter, reducer = self.splitreduce)]
 		
 	def splitter(self, key, line):
 		var = line.strip().upper()
