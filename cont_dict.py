@@ -43,7 +43,7 @@ dict['VETQVA'] = 0
 dict['VETYN'] = 0
 dict['WKSWORK'] = 1
 dict['YEAR'] = 0
-dict['CLASS'] = 0
+dict['CLASS'] = -1
 
 with open('contdict_pickle', 'wb') as f:
 	pickle.dump(dict, f)

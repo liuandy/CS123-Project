@@ -10,7 +10,7 @@ class MRLogReg(MRJob):
 		
 	def splitreduce(self, key, line):
 		# Set N to number of slaves
-		N = 4
+		N = 2
 		
 		rv = []
 		for i in range(N):
@@ -36,12 +36,17 @@ class MRLogReg(MRJob):
 		data_url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/pickled_data'
 		p_data = urllib2.urlopen(data_url).read()
 		data = pickle.loads(p_data)
+		
+		data_t_url = 'https://s3.amazonaws.com/cs12300-spr13-aliu/data/test_pickle'
+		p_data = urllib2.urlopen(data_url).read()
+		data_t = pickle.loads(p_data)
 
 		for vars in line:
 			varlist = vars.strip().split(',')
 			varlist = filter(lambda x: x in cont_dict and cont_dict[x] != -1, varlist)
 
 			data2 = data[varlist + ['CLASS']].copy()
+			data2_t = data_t[varlist + ['CLASS']].copy()
 
 			regvars = []
 			for var in varlist:
@@ -50,6 +55,7 @@ class MRLogReg(MRJob):
 					i = 0
 					for l in levels[1:]:
 						data2[var + str(i)] = 1 * (data2[var] == l)
+						data2_t[var + str(i)] = 1 * (data2_t[var] == l)
 						regvars.append(var + str(i))
 						i += 1
 				else:
@@ -58,16 +64,23 @@ class MRLogReg(MRJob):
 			try:
 				logger = sm.Logit(data2['CLASS'], data2[regvars])
 
-				preds = logger.fit().predict()
+				fit = logger.fit()
+				preds = fit.predict()
 
 				errs = np.array(data2['CLASS']) - np.round(preds)
 
 				t1err = len(filter(lambda x: x == -1, errs)) / float(len(data2['CLASS']) - sum(data2['CLASS']))
 				t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
-				
-				yield (vars, (t1err, t2err))
+
+				preds_test = fit.predict(data2_t[regvars])
+				errs_test = np.array(data2_t['CLASS']) - np.round(preds_test)
+
+				t1err_t = len(filter(lambda x: x == -1, errs_test)) / float(len(data2_t['CLASS']) - sum(data2_t['CLASS']))
+				t2err_t = len(filter(lambda x: x == 1, errs_test)) / float(sum(data2_t['CLASS']))
+
+				yield (vars, (t1err, t2err, t1err_t, t2err_t))
 			except:
-				yield (vars, (-1, -1))
+				yield (vars, (-1, -1, -1, -1))
 				pass
 				
 	def reducer(self, key, line):
