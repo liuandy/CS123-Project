@@ -1,11 +1,13 @@
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage{amsmath}    % need for subequations
-\usepackage{graphicx}   % need for figures
+%\usepackage{graphicx}   % need for figures
 \usepackage{verbatim}   % useful for program listings
 \usepackage{color}      % use if color is used in text
 \usepackage{subfigure}  % use for side-by-side figures
 \usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage[pdftex]{graphicx}
+
 
 \title{CMSC 12300 Final Project}
 \author{Andy Liu and Nelson Auner}
@@ -33,4 +35,7 @@ The most pertinant characteristic of the data set is that the "over 50K" variabl
 \section{Initial analysis}
 Our inital analysis was done in R, and much work was required to find and adapt the necessary statistical methods for use in python. 
 We used the Akaike Information Criteria (AIC), defined as $AIC = 2k - 2ln(L)$, where $k$ is the number of the parameters in the model, and $L$ is the maximized value of the likelihood function - in our case, the logistical regression equation defined above. By maximizing AIC, we produced a subset of predictors that AIC evaluated as the "best" predictor sets. We noticed that among single-variable predictive methods, the education variable was one of the most effective, with a false positive error rate of 5% false negative error rate of .7%. However, these rates are not accurate measures of performance, because we are testing our predictor with the same data we used to train. 
+
+\section{Cross Validation}
+\includegraphics[width = 20cm]{CV_5K_1Kfold.png}
 \end{document}
