@@ -154,4 +154,14 @@ pylab.show()
 		# return [self.mr(mapper = self.mapper, combiner = None, reducer = self.reducer)]
 
 
-
+def f(x):
+	return exp(x)/(1+exp(x))
+	
+x = range(-600,600)
+x = [i/100. for i in x]
+y = [f(i) for i in x]
+pylab.plot(x,y)
+pylab.title("Logistic Function")
+pylab.xlabel("x")
+pylab.ylabel("f(x)") 
+pylab.show()
