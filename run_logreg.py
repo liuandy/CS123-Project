@@ -10,4 +10,4 @@ if __name__ == '__main__':
 			for line in runner.stream_output():
 				key, value = job.parse_output_line(line)
 				
-				f.write('\'%s\',%s,%s,%s,%s\n' % (key, value[0][0], value[0][1], value[0][2], value[0][3]))
+				f.write('\'%s\',%s,%s,%s,%s\n' % (key.replace(',',' '), value[0][0], value[0][1], value[0][2], value[0][3]))
