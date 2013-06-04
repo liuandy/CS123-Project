@@ -50,23 +50,29 @@ with open('scan_results.csv', 'w') as f:
 			else:
 				regvars.append(var)
 
+		try:
+			logger = sm.Logit(data2['CLASS'], data2[regvars])
 
-		logger = sm.Logit(data2['CLASS'], data2[regvars])
+			fit = logger.fit()
+			preds = fit.predict()
 
-		fit = logger.fit()
-		preds = fit.predict()
+			errs = np.array(data2['CLASS']) - np.round(preds)
 
-		errs = np.array(data2['CLASS']) - np.round(preds)
-
-		t1err = len(filter(lambda x: x == -1, errs)) / float(len(data2['CLASS']) - sum(data2['CLASS']))
-		t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
+			t1err = len(filter(lambda x: x == -1, errs)) / float(len(data2['CLASS']) - sum(data2['CLASS']))
+			t2err = len(filter(lambda x: x == 1, errs)) / float(sum(data2['CLASS']))
 
 
-		preds_test = fit.predict(data2_t[regvars])
-		errs_test = np.array(data2_t['CLASS']) - np.round(preds_test)
+			preds_test = fit.predict(data2_t[regvars])
+			errs_test = np.array(data2_t['CLASS']) - np.round(preds_test)
 
-		t1err_t = len(filter(lambda x: x == -1, errs_test)) / float(len(data_test['CLASS']) - sum(data_test['CLASS']))
-		t2err_t = len(filter(lambda x: x == 1, errs_test)) / float(sum(data_test['CLASS']))
+			t1err_t = len(filter(lambda x: x == -1, errs_test)) / float(len(data_test['CLASS']) - sum(data_test['CLASS']))
+			t2err_t = len(filter(lambda x: x == 1, errs_test)) / float(sum(data_test['CLASS']))
+		except:
+			t1err = -1
+			t2err = -1
+			t1err_t = -1
+			t2err_t = -1
+			pass
 		
 		f.write("'%s',%s,%s,%s,%s\n" % (in_name.strip(), t1err, t2err, t1err_t, t2err_t))
 		
