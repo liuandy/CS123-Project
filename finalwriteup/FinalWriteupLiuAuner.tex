@@ -29,7 +29,7 @@ Our project investigates the use of census data to  predict whether a household 
 
 To this end, we used R and Python, deployed on personal computers as well as AWS, to implement logistical regression of various combinations of regressors. We took the best models, as defined by their performance within the training set, and subjected them to cross-validation. To deal with missing data, we utilized k nearest neighbors to "fill in" missing variables with the nearest closest observation.
 
- Our results suggest the following: Education as a stand-alone predictor is a very good model, with around 5.4\% false positive rate and .5\% false negative rate. By very good, however, we mean compared to other non-trivial models, considering that the relative lack of diversity in our responses, given an absolute error weighting, favors a classification scheme with all-negative predictions. 
+Our results suggest the following: Education as a stand-alone predictor is a very good model, with around 5.4\% false positive rate and .5\% false negative rate. By very good, however, we mean compared to other non-trivial models, considering that the relative lack of diversity in our responses, given an absolute error weighting, favors a classification scheme with all-negative predictions. 
 
 
 \section{Description of the Data set}
@@ -85,14 +85,13 @@ In this method of implementation, we ran our script on our personal computers to
 \subsection{Pulling out the big guns with Amazon AWS (or trying to)}
 In this implementation, the goal was to run all the logistic regressions using combinations of four to five variables using Amazon's Elastic Map Reduce and mrjob. This would be another 300,000 logistic regressions, and assuming that each regression takes about 10 seconds (this is what we observed on our personal computers), this would amount to about 37 days of logistic regressions. Essentially, the goal here was to take advantage of parallel computing to make statisticians pale in fear at the amount of compute time we spent on a single modeling problem.
 
-The development of this implementation was greatly hindered by our usage of the pandas, numpy, and statsmodels packages in Python. As these packages were not native to the EC2 machines, our initial roadblock was simply getting the packages installed and working on the EC2 computers via mrjob.
+To make this possible, we used the pickle package to package our pandas dataframes, and then loaded them into Amazon's S3 strorage server. The development of this implementation was greatly hindered by our usage of the pandas, numpy, and statsmodels packages in Python. As these packages were not native to the EC2 machines, our initial roadblock was simply getting the packages installed and working on the EC2 computers via mrjob.
 
 Our final version of this implementation takes in a text file where each row is a list of variables to perform a single logistic regression on, and via mrjob, performs logisitic regression on the variables.
 
 Although we had great plans for this implementation, we discovered that it could only take small lists of variables. Once the number of requested logistic regressions got too large, a map job would inevitably fail, causing the entire job to fail, and leaving us with no results.
 
-\section{ Results: Model Selection}
-Andy also spits magic here
+
 \section{Cross Validation}
 An important aspect of our project is that our selected models predict accurately, not only for the sample for which we have data, but for the theoretical population. In this case, our population is less theoretical-it is the U.S. population represented by our census data. Because our prediction models are built by minimizing the error within our sample, it's unreasonable to assume that the model will have as low rates of error as those that are achieved by predicting the data used to generate the model.
 
