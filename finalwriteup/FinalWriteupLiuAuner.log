@@ -1,9 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  3 JUN 2013 23:49
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  4 JUN 2013 09:17
+=======
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.12.1)  4 JUN 2013 02:55
+>>>>>>> 2a0d22400c7ad80680082ac9167599283ba8465b
 entering extended mode
-**FinalWriteupLiuAuner.tex
+**C:/Users/Andy/Documents/GitHub/CS123-Project/finalwriteup/FinalWriteupLiuAune
+r.tex
 
-(C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
-\andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.tex
+(C:/Users/Andy/Documents/GitHub/CS123-Project/finalwriteup/FinalWriteupLiuAuner
+.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -32,45 +37,45 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 211.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 307.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -91,8 +96,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
@@ -119,7 +124,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip47
 \subfigcapskip=\skip48
@@ -135,7 +140,7 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
 \subfig@top=\skip51
 \subfig@bottom=\skip52
 )
@@ -275,7 +280,7 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \Gin@req@height=\dimen118
 \Gin@req@width=\dimen119
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sidecap\sidecap.sty"
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\sidecap\sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -296,7 +301,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks23
 \@floatcapt=\box30
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
 \c@WF@wrappedlines=\count116
@@ -304,8 +309,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 )
-(C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
-\andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.aux)
+(C:\Users\Andy\Documents\GitHub\CS123-Project\finalwriteup\FinalWriteupLiuAuner
+.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
@@ -320,8 +325,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ (C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen126
@@ -349,16 +353,15 @@ LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
 LaTeX Info: Redefining \nameref on input line 17.
 
-(C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
-\andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.out)
-(C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
-\andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.out)
+(C:\Users\Andy\Documents\GitHub\CS123-Project\finalwriteup\FinalWriteupLiuAuner
+.out)
+(C:\Users\Andy\Documents\GitHub\CS123-Project\finalwriteup\FinalWriteupLiuAuner
+.out)
 \@outlinefile=\write3
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+ (C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+(C:\Users\Andy\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 
 ABD: EverySelectfont initializing macros
@@ -380,8 +383,8 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \JustifyingParindent=\skip67
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <logisticfunction.png, id
-=60, 589.0005pt x 444.4605pt>
+{C:/Users/Andy/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<logisticfunction.png, id=60, 589.0005pt x 444.4605pt>
 File: logisticfunction.png Graphic file (type png)
 
 <use logisticfunction.png>
@@ -392,42 +395,105 @@ Package pdftex.def Info: logisticfunction.png used on input line 61.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.79 
-      <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/C
-MSC123/andyproj/CS123-Project/finalwriteup/logisticfunction.png>]
-<CV_5K_1Kfold.png, id=74, 724.1454pt x 591.8913pt>
+l.74 
+      <C:/Users/Andy/Documents/GitHub/CS123-Project/finalwriteup/logisticfuncti
+on.png>] <CV_5K_1Kfold.png, id=74, 724.1454pt x 591.8913pt>
 File: CV_5K_1Kfold.png Graphic file (type png)
+<<<<<<< HEAD
  <use CV_5K_1Kfold.png>
 Package pdftex.def Info: CV_5K_1Kfold.png used on input line 86.
 (pdftex.def)             Requested size: 341.43306pt x 279.07404pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
+[4] <CV_5K_400fold_filled.png, id=79, 529.7391pt x 563.706pt>
+File: CV_5K_400fold_filled.png Graphic file (type png)
+
+<use CV_5K_400fold_filled.png>
+Package pdftex.def Info: CV_5K_400fold_filled.png used on input line 98.
+(pdftex.def)             Requested size: 341.43306pt x 363.33383pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 \end{document}
-                    <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012
--2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+l.101 
+       <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/
+CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
+<CV_FULLn_1Kfold.png, id=86, 589.0005pt x 444.4605pt>
+File: CV_FULLn_1Kfold.png Graphic file (type png)
+
+<use CV_FULLn_1Kfold.png>
+Package pdftex.def Info: CV_FULLn_1Kfold.png used on input line 107.
+(pdftex.def)             Requested size: 341.43306pt x 257.6584pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.109 \end{figure}
+                   <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-
+2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_400fold_filled.pn
+g>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.115 \end{document}
+                     <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago201
+2-2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_FULLn_1Kfold.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 
 (C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
 \andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `FinalWriteupLiuAuner.out' has not changed.
 (rerunfilecheck)             Checksum: F93FAB2CB4DF2A5CA685810794FF8E52;629.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 6140 strings out of 493921
- 90391 string characters out of 3144873
+ 6155 strings out of 493921
+ 90678 string characters out of 3144873
  173708 words of memory out of 3000000
- 9348 multiletter control sequences out of 15000+200000
+ 9356 multiletter control sequences out of 15000+200000
  9401 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,7n,28p,1055b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,28p,1055b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
+=======
+
+<use CV_5K_1Kfold.png>
+Package pdftex.def Info: CV_5K_1Kfold.png used on input line 90.
+(pdftex.def)             Requested size: 341.43306pt x 279.07404pt.
+ [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.98 \end{document}
+                    <C:/Users/Andy/Documents/GitHub/CS123-Project/finalwriteup/
+CV_5K_1Kfold.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+
+(C:\Users\Andy\Documents\GitHub\CS123-Project\finalwriteup\FinalWriteupLiuAuner
+.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package rerunfilecheck Info: File `FinalWriteupLiuAuner.out' has not changed.
+(rerunfilecheck)             Checksum: 6FCE4BA1B3BF78E31C1F21B2DF5A95C7;629.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
+ ) 
+Here is how much of TeX's memory you used:
+ 6136 strings out of 493921
+ 89862 string characters out of 3144879
+ 173708 words of memory out of 3000000
+ 9343 multiletter control sequences out of 15000+200000
+ 9401 words of font info for 34 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 29i,7n,28p,1113b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+>>>>>>> 2a0d22400c7ad80680082ac9167599283ba8465b
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
@@ -436,9 +502,17 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on FinalWriteupLiuAuner.pdf (4 pages, 180440 bytes).
+<<<<<<< HEAD
+Output written on FinalWriteupLiuAuner.pdf (7 pages, 267313 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on FinalWriteupLiuAuner.pdf (5 pages, 182917 bytes).
+PDF statistics:
+ 117 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 2a0d22400c7ad80680082ac9167599283ba8465b
 

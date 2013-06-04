@@ -52,7 +52,7 @@ def CV_fit(yX,n,randomize = True):
 
 #--------------------- begin data description----------------------------#
 #Load dataf - data filled (with knn)
-data = pandas.read_csv('census_original.csv', index_col = 0)
+data = pandas.read_csv('census_nomissing.csv', index_col = 0)
 #note how many missing obserations there are: 
 print data.dropna()
 #95130
@@ -66,7 +66,7 @@ print data
 #--------------------- Seperate data for logistic regression----------#
 #Transfering R to python
 #create a small samples
-n = len(data)
+n = 5000
 rowstokeep = random.sample(data.index,n)
 s = data.ix[rowstokeep]
 
@@ -101,7 +101,7 @@ logpredict(fitted,X,y)
 #---------------begin functions for computationally intensive cross-validation-----#
 # A function to calculate misclassification rates
  #-------------------begin cross validation scripting---------------------#
-Ks = [10,20,30,40,50,200,400,600,800,1000] #<--- adjust this. 
+Ks = [10,20,30,40,50,200,400] #<--- adjust this. 
 k_cv,fp_cv,fn_cv = [],[],[]
 for k in Ks:
 	CVresults = CV_fit(s,k)
@@ -114,7 +114,7 @@ for k in Ks:
 d = {'k_cv' : k_cv, 'fp_cv' : fp_cv, 'fn_cv' : fn_cv}
 cvdata = pandas.DataFrame(d)
 #store data outwards: 
-cvdata.to_csv("cvresults.csv")
+cvdata.to_csv("cvresultsfilled.csv")
 
 #-----plotting----------#
 pylab.figure(1)
