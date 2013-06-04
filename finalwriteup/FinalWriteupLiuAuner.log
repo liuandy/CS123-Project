@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  3 JUN 2013 23:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  4 JUN 2013 09:17
 entering extended mode
 **FinalWriteupLiuAuner.tex
 
@@ -400,34 +400,63 @@ File: CV_5K_1Kfold.png Graphic file (type png)
  <use CV_5K_1Kfold.png>
 Package pdftex.def Info: CV_5K_1Kfold.png used on input line 86.
 (pdftex.def)             Requested size: 341.43306pt x 279.07404pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
+[4] <CV_5K_400fold_filled.png, id=79, 529.7391pt x 563.706pt>
+File: CV_5K_400fold_filled.png Graphic file (type png)
+
+<use CV_5K_400fold_filled.png>
+Package pdftex.def Info: CV_5K_400fold_filled.png used on input line 98.
+(pdftex.def)             Requested size: 341.43306pt x 363.33383pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.94 \end{document}
-                    <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012
--2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+l.101 
+       <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/
+CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
+<CV_FULLn_1Kfold.png, id=86, 589.0005pt x 444.4605pt>
+File: CV_FULLn_1Kfold.png Graphic file (type png)
+
+<use CV_FULLn_1Kfold.png>
+Package pdftex.def Info: CV_FULLn_1Kfold.png used on input line 107.
+(pdftex.def)             Requested size: 341.43306pt x 257.6584pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.109 \end{figure}
+                   <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-
+2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_400fold_filled.pn
+g>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.115 \end{document}
+                     <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago201
+2-2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_FULLn_1Kfold.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 
 (C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
 \andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `FinalWriteupLiuAuner.out' has not changed.
 (rerunfilecheck)             Checksum: F93FAB2CB4DF2A5CA685810794FF8E52;629.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 6140 strings out of 493921
- 90391 string characters out of 3144873
+ 6155 strings out of 493921
+ 90678 string characters out of 3144873
  173708 words of memory out of 3000000
- 9348 multiletter control sequences out of 15000+200000
+ 9356 multiletter control sequences out of 15000+200000
  9401 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,7n,28p,1055b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,28p,1055b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
@@ -436,9 +465,9 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on FinalWriteupLiuAuner.pdf (4 pages, 180440 bytes).
+Output written on FinalWriteupLiuAuner.pdf (7 pages, 267313 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
