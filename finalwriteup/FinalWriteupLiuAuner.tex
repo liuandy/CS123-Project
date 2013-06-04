@@ -66,11 +66,15 @@ a transformation which looks like:
 This function can be viewed as a CDF $($cumulative density function$)$ and closely mirrors that of a normal distribution, and projects the space of $X \beta$ to the interval $[0,1]$, allowing us to view the result as the probability that our outcome is 1. Our reasons for selecting a logistic regression model are simple: although it is more complicated than a basic regression mode $Y = X\beta$, logistic regression allows us to predict a binary outcome, while resulting in more interpretable coefficients $\beta$ than "black box" methods such as neural networks or random forest. 
 
 \section{Initial analysis}
-Our inital analysis was done in R, and much work was required to find and adapt the necessary statistical methods for use in python. 
+Our initial analysis was done in R, and much work was required to find and adapt the necessary statistical methods for use in python. 
 We used the Akaike Information Criteria (AIC), defined as $AIC = 2k - 2ln(L)$, where $k$ is the number of the parameters in the model, and $L$ is the maximized value of the likelihood function - in our case, the logistical regression equation defined above. By maximizing AIC, we produced a subset of predictors that AIC evaluated as the "best" predictor sets. We noticed that among single-variable predictive methods, the education variable was one of the most effective, with a false positive error rate of 5\% and false negative error rate of .7\%. However, these rates are not accurate measures of performance, because we are testing our predictor with the same data we used to train. $($Correcting our evaluation of model effectiveness will be discussed in the cross validation section$)$.
 
-\section{Filling in missing observations with KNN}
-Andy spits his magic here. 
+\section{Filling in missing observations with 1NN}
+Since we were working with somewhat cleaned census data, and all the joy that entails, one of the bigger issues that we had to deal with was missing data. Logistic regression cannot be run on an incomplete dataset. The method we decided to use to implement filling in missing data was a one nearest neighbor algorithm. The distance function we used to implement this was very simple. We selected a series of columns that were present in all observations, and the distance between any two observations was simply the number of mismatches across the various columns. The use of this distance function relies on the critical assumption that people sharing commonalities in these fields will tend to also share commonalities in the missing fields. Whether or not this is true is debateable, but the filling in missing data was useful for completeness. For every missing entry, we took its nearest neighbor, and used its column values to fill in the missing values for that entry.
+
+In our analysis of the missing data, we realized that many of the columns that had missing data tended to involve information that does not necessarily apply to every person. For example, the field for the previous state someone lived in is not applicable to people who have lived in one state their entire lives. Due to this, we ended up dropping the majority of the columns with missing data, retaining only the columns containing information on the nationality of a person's biological parents. It would be interesting to see if our 1NN method actually led to meaningful results.
+
+While one could argue that this method is not statistically well-founded, the fact that only two variables we use for potential logistic regressions out of many more are filled in with this method, debate over the matter seems of minimal consequence.
 
 \section{ Results: Model Selection}
 Andy also spits magic here
