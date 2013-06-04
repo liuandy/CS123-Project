@@ -1,6 +1,10 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Description of the Data set}{}% 2
 \BOOKMARK [1][-]{section.3}{ Logistic Regression}{}% 3
-\BOOKMARK [1][-]{section.4}{Initial analysis}{}% 4
-\BOOKMARK [1][-]{section.5}{Filling in missing observations with KNN}{}% 5
-\BOOKMARK [1][-]{section.6}{Cross Validation}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Explanation of Logistic Regression model}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Intuition behind logistic regression}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Initial analysis}{}% 6
+\BOOKMARK [1][-]{section.5}{Filling in missing observations with KNN}{}% 7
+\BOOKMARK [1][-]{section.6}{ Results: Model Selection}{}% 8
+\BOOKMARK [1][-]{section.7}{Cross Validation}{}% 9
+\BOOKMARK [1][-]{section.8}{appendix}{}% 10

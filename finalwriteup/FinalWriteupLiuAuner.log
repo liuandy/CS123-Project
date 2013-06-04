@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  3 JUN 2013 19:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.4.17)  3 JUN 2013 23:49
 entering extended mode
 **FinalWriteupLiuAuner.tex
 
@@ -288,58 +288,66 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \c@SC@C=\count114
 \SC@BOX=\box28
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count115
+\float@exts=\toks22
+\float@box=\box29
+\@float@everytoks=\toks23
+\@floatcapt=\box30
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
-\c@WF@wrappedlines=\count115
-\WF@box=\box29
-\WF@everypar=\toks22
+\c@WF@wrappedlines=\count116
+\WF@box=\box31
+\WF@everypar=\toks24
 Package: wrapfig 2003/01/31  v 3.6
 )
 (C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
 \andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count117
 \scratchdimen=\dimen126
-\scratchbox=\box30
-\nofMPsegments=\count117
-\nofMParguments=\count118
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count119
+\scratchbox=\box32
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count120
 \MPscratchDim=\dimen127
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks26
 )
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 16.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 17.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count122
+\c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
 \andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.out)
@@ -373,46 +381,53 @@ LaTeX Info: Redefining \selectfont on input line 126.
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <logisticfunction.png, id
-=44, 589.0005pt x 444.4605pt>
+=60, 589.0005pt x 444.4605pt>
 File: logisticfunction.png Graphic file (type png)
 
 <use logisticfunction.png>
-Package pdftex.def Info: logisticfunction.png used on input line 57.
+Package pdftex.def Info: logisticfunction.png used on input line 61.
 (pdftex.def)             Requested size: 199.16928pt x 150.29396pt.
- [2 <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/CMS
-C123/andyproj/CS123-Project/finalwriteup/logisticfunction.png>] <CV_5K_1Kfold.p
-ng, id=54, 724.1454pt x 591.8913pt>
+ [2] [3pdfTeX warning (ext4): destination with the same identifier (name{figure
+.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.79 
+      <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/C
+MSC123/andyproj/CS123-Project/finalwriteup/logisticfunction.png>]
+<CV_5K_1Kfold.png, id=74, 724.1454pt x 591.8913pt>
 File: CV_5K_1Kfold.png Graphic file (type png)
+ <use CV_5K_1Kfold.png>
+Package pdftex.def Info: CV_5K_1Kfold.png used on input line 86.
+(pdftex.def)             Requested size: 341.43306pt x 279.07404pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 
-<use CV_5K_1Kfold.png>
-Package pdftex.def Info: CV_5K_1Kfold.png used on input line 72.
-(pdftex.def)             Requested size: 569.05511pt x 465.13243pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
 
-Overfull \hbox (99.3001pt too wide) in paragraph at lines 72--73
-[] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
-[3] [4 <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012-2013/Spring/
-CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.94 \end{document}
+                    <C:/Users/nauner/SkyDrive/School/ClassMaterials/Chicago2012
+-2013/Spring/CMSC123/andyproj/CS123-Project/finalwriteup/CV_5K_1Kfold.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
 
 (C:\Users\nauner\SkyDrive\School\ClassMaterials\Chicago2012-2013\Spring\CMSC123
 \andyproj\CS123-Project\finalwriteup\FinalWriteupLiuAuner.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `FinalWriteupLiuAuner.out' has not changed.
-(rerunfilecheck)             Checksum: 5BEEEBB116B5B07C5DE35D736EB6039A;347.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
+(rerunfilecheck)             Checksum: F93FAB2CB4DF2A5CA685810794FF8E52;629.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 6077 strings out of 493921
- 89551 string characters out of 3144873
- 172036 words of memory out of 3000000
- 9294 multiletter control sequences out of 15000+200000
- 9094 words of font info for 33 fonts, out of 3000000 for 9000
+ 6140 strings out of 493921
+ 90391 string characters out of 3144873
+ 173708 words of memory out of 3000000
+ 9348 multiletter control sequences out of 15000+200000
+ 9401 words of font info for 34 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,7n,28p,926b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,28p,1055b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
@@ -421,9 +436,9 @@ ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on FinalWriteupLiuAuner.pdf (4 pages, 174216 bytes).
+Output written on FinalWriteupLiuAuner.pdf (4 pages, 180440 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
